@@ -1,0 +1,20 @@
+{
+  "name": "acf/video-fancybox",
+  "title": "Vidéo (YouTube + Fancybox)",
+  "description": "Vignette cliquable qui ouvre une lightbox Fancybox avec une vidéo YouTube.",
+  "category": "embed",
+  "icon": "video-alt3",
+  "keywords": ["video", "youtube", "fancybox", "lightbox"],
+  "style": ["file:./video.css"],
+  "viewScript": ["file:./video.js"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "video.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": { "text": true, "background": true, "link": true },
+    "spacing": { "margin": true, "padding": true }
+  }
+}
