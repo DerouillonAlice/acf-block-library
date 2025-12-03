@@ -1,0 +1,28 @@
+.acf-video-fancybox {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.acf-video-fancybox .video-thumb {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.acf-video-fancybox img {
+  width: 100%;
+  display: block;
+}
+.acf-video-fancybox .video-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.acf-video-fancybox .video-play svg {
+  transition: transform 0.2s ease;
+}
+.acf-video-fancybox .video-thumb:hover svg {
+  transform: scale(1.08);
+}
