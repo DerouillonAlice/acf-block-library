@@ -5,7 +5,7 @@
   "category": "embed",
   "icon": "video-alt3",
   "keywords": ["video", "youtube", "fancybox", "lightbox"],
-  "style": ["file:./video.css"],
+  "style": ["file:./style.css"],
   "viewScript": ["file:./video.js"],
   "acf": {
     "mode": "preview",
