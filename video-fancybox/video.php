@@ -9,6 +9,7 @@ $thumb_id  = get_field('thumbnail');
 $icon_color = get_field('icon_color') ?: '#ffffff'; 
 
 
+// --- Déterminer la cible Fancybox (href + data-type) ---
 $href = '';
 $data_type = '';
 $yt_id = null;
@@ -19,6 +20,7 @@ if ($source === 'youtube') {
     echo '<p style="color:#b32d2e">⚠️ Renseignez une URL YouTube.</p>';
     return;
   }
+  // Extraire ID
   if (preg_match('~(?:youtube\.com/(?:watch\?v=|embed/)|youtu\.be/)([A-Za-z0-9_-]{6,})~', $video_url, $m)) {
     $yt_id = $m[1];
   } else {
@@ -33,6 +35,7 @@ if ($source === 'youtube') {
   $href = 'https://www.youtube.com/watch?v=' . $yt_id;
 
 } else {
+  // MP4
   $file_url = trim((string) get_field('video_file'));
   if (!$file_url) {
     echo '<p style="color:#b32d2e">⚠️ Ajoutez un fichier vidéo (MP4/WebM).</p>';
@@ -42,7 +45,7 @@ if ($source === 'youtube') {
   $data_type = 'video'; 
 }
 
-// --- Miniature ---
+// --- Miniature (poster) ---
 $thumb_url = '';
 $thumb_alt = esc_attr($title);
 
@@ -53,6 +56,7 @@ if ($thumb_id && is_numeric($thumb_id)) {
   $thumb_url = "https://i.ytimg.com/vi/{$yt_id}/maxresdefault.jpg";
 }
 
+// Wrapper
 $wrapper_attrs = function_exists('get_block_wrapper_attributes')
   ? get_block_wrapper_attributes(['class' => 'acf-video-fancybox'])
   : 'class="acf-video-fancybox"';

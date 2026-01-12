@@ -1,5 +1,5 @@
 ;(function () {
-  // Charge Fancybox 5 depuis CDN si absente
+
   const CDN_JS = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js'
   const CDN_CSS = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
 
@@ -33,7 +33,7 @@
     loadCssOnce(CDN_CSS)
       .then(() => loadJsOnce(CDN_JS))
       .then(() => {
-        // Fancybox.bind('[data-fancybox]', { Thumbs: false, Toolbar: { display: ['close'] } });
+        // options 
       })
   }
 
