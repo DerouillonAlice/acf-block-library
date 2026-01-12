@@ -1,0 +1,20 @@
+{
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Section hero avec image de couverture et texte",
+  "category": "formatting",
+  "icon": "cover-image",
+  "keywords": ["hero", "cover", "image", "texte"],
+  "style": ["file:./hero.css"],
+  "viewScript": ["file:./hero.js"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "hero.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": { "text": true, "background": true, "link": true },
+    "spacing": { "margin": true, "padding": true }
+  }
+}
